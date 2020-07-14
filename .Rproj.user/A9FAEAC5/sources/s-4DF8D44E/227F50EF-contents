@@ -14,7 +14,7 @@ output:
     css: stylesheet.css
     reveal_options:
       controls: false  # Desativar botões de navegação no slide
-      mouseWheel: true # Passar slides com o mouse
+      mouseWheel: true # Passar slides com o mous e
 ---
 
 ## Motivação
