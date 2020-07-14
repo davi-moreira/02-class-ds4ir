@@ -1,0 +1,67 @@
+---
+title: "02-class-ds4ir-assignment"
+author: "seu nome aqui"
+date: "`r format(Sys.time(), '%d-%m-%Y')`"
+output: 
+  html_document:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r pck, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(kableExtra)
+library(here)
+```
+
+# Assignment {-}
+
+Uma organização internacional (OI) tem o interesse de desenvolver projetos de promoção 
+de direitos humanos em diferentes regiões do globo. Uma das grandes 
+preocupações dessa OI é ter o cuidado para que desde o início a formulação dos projetos considere
+caracteríticas regionais relacionadas à religião e o regime político estabelecido.
+
+Com foco sobre o cristianismo e o islamismo, desenvolva análise que apresente um panorama
+regional médio relacionado à religião e regimes políticos estabelecidos no ano de 2000. Sua análise deve:
+
+# Apresentar tabela a respeito da característica média de cada região em relação aos regimes políticos e às religiões de interesse. A tabela deve:
+
+- Conter 4 colunas e 4 linhas sem `NAs`
+- Estar ordenada em ordem decrescente com base no resultado dos regimes políticos
+- Ter os nomes das regiões na primeira coluna
+- Ser apresentada no documento utilizando: `kable(seu objeto) %>% kable_styling()`
+
+Utilize o *code chunk* abaixo para desenvolver sua resposta. 
+
+```{r qog-religion, echo=FALSE, warning=FALSE, message=FALSE}
+qog <- read_csv(here("data", "qog_bas_ts_jan20.csv"))
+qog_region <- read_csv(here("data", "qog_region_label.csv"))
+
+resposta <- qog %>% select(year, ht_region, p_polity2, arda_chgenpct, arda_isgenpct, arda_jdgenpct) %>% 
+  filter(year == 2000) %>%
+  left_join(qog_region, by = c("ht_region" = "id")) %>% 
+  select(ht_region, region_label, everything()) %>% 
+  group_by(region_label) %>%
+  summarise(p_polity2_mean = mean(p_polity2, na.rm = T),
+            cristao = mean(arda_chgenpct),
+            islamico = mean(arda_isgenpct)) %>%
+  ungroup() %>% arrange(desc(p_polity2_mean)) %>% drop_na()
+
+kable(resposta) %>% kable_styling()
+```
+
+# Qual é a região com menor proporção média de cristãos? 
+
+**Observação**: Apresente sua resposta de modo que seja um reflexo direto do resultado da análise. 
+
+A região com menor proporção média de cristãos é `r resposta$region_label[which.min(resposta$cristao)]`.
+
+# Produza um documento .html com o resultado de sua análise
+
+**Observação**: O documento gerado deve omitir o seu código. E não se esqueça de colocar seu nome.
+
+
+

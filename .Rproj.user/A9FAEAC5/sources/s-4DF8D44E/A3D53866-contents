@@ -1,0 +1,24 @@
+## Title: Base Project Packages
+## Authors:  Davi Moreira and Rafael N Magalhaes
+## Corresponding author:  davi.moreira(at)gmail( dot).com
+## Date:  2020-07
+## Description: Install all packages for the class
+
+# rm(list = ls())
+
+# CAUTION: Do not forget to compile a .Rmd file in the Base Project Course
+
+# Packages ---------------------------------------------------------------------
+# Instructions: just copy and paste the following lines in the Base Project 
+# Course Console
+if(require(tidyverse) == F) {install.packages("tidyverse"); require(tidyverse)}
+if(require(stringi) == F) {install.packages("stringi"); require(stringi)}
+if(require(quanteda) == F) install.packages('quanteda'); require(quanteda)
+if(require(stm) == F) install.packages('stm'); require(stm)
+if(require(revealjs) == F) {install.packages("revealjs"); require(revealjs)}
+if(require(here) == F) {install.packages("here"); require(here)}; require(here)
+# if(require(usethis) == F) {install.packages("usethis"); require(usethis)} 
+# use_git_config(user.name = "Mona Lisa", user.email = "mona.lise@example.com")
+if(require(conflicted) == F) {install.packages("conflicted"); require(conflicted)}; require(conflicted)
+conflict_prefer("here", "here")
+conflict_prefer("filter", "dplyr")

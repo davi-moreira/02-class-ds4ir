@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1594669689704.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2359028231",
+    "id" : "C8500164",
+    "lastKnownWriteTime" : 1594675130,
+    "last_content_update" : 1594675130342,
+    "path" : "~/Dropbox/academic/cursos/cursos-davi/data-science/2020-ds4ir-fgv-winter/02-class-ds4ir/instructor/02-class-ds4ir-assignment-solution.Rmd",
+    "project_path" : "instructor/02-class-ds4ir-assignment-solution.Rmd",
+    "properties" : {
+        "cursorPosition" : "35,0",
+        "last_setup_crc32" : "4DF8D44Ebb338d19",
+        "scrollLine" : "32",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
