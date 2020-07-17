@@ -70,6 +70,10 @@ padrão de análise de dados no `R`.
 ![Tidyverse](images/tidyverse.PNG){width=600px}
 </center>
 
+<center>
+[The tidy tools manifesto](https://cran.r-project.org/web/packages/tidyverse/vignettes/manifesto.html)
+<center>
+
 ## 
 <center>
 ![Pipe](images/pipe.png){width=300px}
