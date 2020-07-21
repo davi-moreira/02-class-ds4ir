@@ -21,7 +21,7 @@ library(here)
 
 Uma organização internacional (OI) tem o interesse de desenvolver projetos de promoção 
 de direitos humanos em diferentes regiões do globo. Uma das grandes 
-preocupações dessa OI é ter o cuidado para que desde o início a formulação dos projetos considere
+preocupações dessa OI é ter o cuidado para que, desde o início, a formulação dos projetos considere
 caracteríticas regionais relacionadas à religião e o regime político estabelecido.
 
 Com foco sobre o cristianismo e o islamismo, desenvolva análise que apresente um panorama

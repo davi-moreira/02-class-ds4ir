@@ -106,7 +106,7 @@ x <- seq(0, 10, .1)
 
 ## Exercício: resposta
 
-- Utilizando o operador `%>%` e as funções `sqrt()` e `plot()` obtenha uma visualização
+<!--- - Utilizando o operador `%>%` e as funções `sqrt()` e `plot()` obtenha uma visualização
 da raiz quadrada de cada um dos elementos do vetor abaixo:
 
 ```{r eval=FALSE, echo=TRUE}
@@ -117,6 +117,7 @@ x <- seq(0, 10, .1)
 x %>% sqrt() %>% plot()
 ```
 
+--->
 
 ## Carregando dados
 
@@ -283,9 +284,8 @@ qog %>%
 
 
 ## Ordenar variáveis com `arrange()`
-
 <center>
-![Arrange](images/arrange.png){width=500px}
+![Arrange](images/arrange.png){width=400px}
 </center>
 
 O comando `arrange()` ordena o banco de dados com base na variável que você selecionar. 
@@ -351,7 +351,7 @@ da preponderância das religiões cristã, islâmica e judaica por região
 
 ## Exercício: resposta
 
-Crie o objeto `qog_group` que seja o resultado do cálculo da mediana `median()` 
+<!---Crie o objeto `qog_group` que seja o resultado do cálculo da mediana `median()` 
 da preponderância das religiões cristã, islâmica e judaica por região 
 (`ht_region`) no ano (`year`) de 2000:
 
@@ -365,6 +365,7 @@ qog_group <- qog %>% filter(year == 2000) %>%
 
 qog_group
 ```
+--->
 
 ## Reorganizar bases com `pivot_wider()` e `pivot_longer()`
 A melhor maneira de entender a utilidade das funções `pivot_wider()` e `pivot_longer()` 

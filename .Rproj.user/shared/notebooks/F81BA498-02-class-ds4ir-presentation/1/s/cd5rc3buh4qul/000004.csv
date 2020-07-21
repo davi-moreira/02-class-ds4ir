@@ -1,9 +1,0 @@
-"0","qog_group <- qog %>% 
-  group_by(year, ht_region, p_polity2) %>% 
-  summarise(cristao = mean(arda_chgenpct),
-            islamico = mean(arda_isgenpct),
-            judeu = mean(arda_jdgenpct)) 
-  arrange(p_polity2)
-"
-"2","Error in arrange(p_polity2) : object 'p_polity2' not found
-"
